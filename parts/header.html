@@ -1,15 +1,19 @@
-<!-- File: parts/header.html -->
-<!-- Responsive header for MTDev Blocks -->
+<!-- header.php -->
 <header class="site-header">
-    <!-- Logo -->
-    <div class="site-logo">
+    <div class="header-logo">
         <a href="<?php echo esc_url(home_url('/')); ?>">
-            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logo.png'); ?>" alt="<?php bloginfo('name'); ?>">
+            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logo.png'); ?>" alt="Logo">
         </a>
     </div>
-
-    <!-- Navigation -->
+    
     <nav class="site-navigation">
-        <!-- wp:navigation {"orientation":"horizontal"} /-->
+        <?php
+        // Esto muestra el menú de navegación en WordPress
+        wp_nav_menu(array(
+            'theme_location' => 'primary', // Asegúrate de registrar el menú en functions.php
+            'menu_class' => 'menu',        // Puedes darle una clase personalizada al menú
+        ));
+        ?>
     </nav>
 </header>
+

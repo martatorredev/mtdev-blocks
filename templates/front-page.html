@@ -1,5 +1,4 @@
-<!-- File: templates/front-page.html -->
-<!-- Template for the front page -->
+<!-- templates/front-page.html -->
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -9,46 +8,49 @@
 </head>
 <body <?php body_class(); ?>>
 
-<!-- Include header template part -->
-<!-- wp:template-part {"slug":"header"} /-->
+    <!-- Header -->
+    <!-- wp:template-part {"slug":"header"} /-->
 
-<!-- Hero Section -->
-<section class="hero">
-    <div class="hero-content">
-        <h1>Welcome to MTDev Blocks</h1>
-        <p>A modern and customizable WordPress theme for Gutenberg.</p>
-        <a href="#about" class="hero-button">Learn More</a>
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Our Website</h1>
+            <p>Discover the best services and solutions for your business.</p>
+        </div>
+        <div class="hero-image">
+            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/hero-girl.jpg'); ?>" alt="A young woman smiling in a professional setting">
+        </div>
     </div>
-</section>
-<!-- Main content sections -->
-<section class="services">
-    <div class="services-content">
+    
+    <!-- Services Section -->
+    <section class="services">
         <h2>Our Services</h2>
         <div class="services-grid">
             <div class="service-item">
                 <h3>Service One</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Short description for Service One.</p>
             </div>
             <div class="service-item">
                 <h3>Service Two</h3>
-                <p>Quisque vel neque nec lorem facilisis scelerisque.</p>
+                <p>Short description for Service Two.</p>
             </div>
             <div class="service-item">
                 <h3>Service Three</h3>
-                <p>Curabitur vehicula risus sed facilisis molestie.</p>
+                <p>Short description for Service Three.</p>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Main content area -->
-<div class="wp-block-group">
-    <!-- wp:post-content /-->
-</div>
+    <!-- Call to Action Section -->
+    <section class="call-to-action">
+        <div class="cta-content">
+            <h2>Ready to Take the Next Step?</h2>
+            <a href="#contact" class="cta-button">Contact Us</a>
+        </div>
+    </section>
 
-<!-- Include footer template part -->
-<!-- wp:template-part {"slug":"footer"} /-->
+    <!-- Footer -->
+    <!-- wp:template-part {"slug":"footer"} /-->
 
-<?php wp_footer(); ?>
+    <?php wp_footer(); ?>
 </body>
 </html>
