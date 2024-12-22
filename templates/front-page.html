@@ -1,0 +1,31 @@
+<!-- File: templates/front-page.html -->
+<!-- Template for the front page -->
+<!DOCTYPE html>
+<html <?php language_attributes(); ?>>
+<head>
+    <meta charset="<?php bloginfo('charset'); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php wp_head(); ?>
+</head>
+<body <?php body_class(); ?>>
+
+<!-- Include header template part -->
+<!-- wp:template-part {"slug":"header"} /-->
+
+<!-- Custom welcome section -->
+<div class="wp-block-group alignwide">
+    <h1>Welcome to MTDev Blocks</h1>
+    <p>Your custom block-based theme for WordPress.</p>
+</div>
+
+<!-- Main content area -->
+<div class="wp-block-group">
+    <!-- wp:post-content /-->
+</div>
+
+<!-- Include footer template part -->
+<!-- wp:template-part {"slug":"footer"} /-->
+
+<?php wp_footer(); ?>
+</body>
+</html>
